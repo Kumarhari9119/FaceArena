@@ -1,0 +1,1773 @@
+/* =====================================================
+   FaceArena Upload Page
+   upload.css  (Part 1)
+===================================================== */
+
+
+/*------------------------------------
+ Upload Hero
+------------------------------------*/
+
+.upload-hero{
+
+    width:100%;
+    padding:150px 0 90px;
+
+    text-align:center;
+
+    position:relative;
+
+}
+
+.upload-hero::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+    radial-gradient(circle at 20% 30%,rgba(90,120,255,.12),transparent 35%),
+    radial-gradient(circle at 80% 20%,rgba(0,220,255,.08),transparent 30%),
+    radial-gradient(circle at 50% 100%,rgba(255,255,255,.04),transparent 40%);
+
+    pointer-events:none;
+
+}
+
+.upload-hero .container{
+
+    position:relative;
+
+    z-index:2;
+
+}
+
+.hero-badge{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    padding:10px 20px;
+
+    border-radius:999px;
+
+    background:rgba(255,255,255,.06);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    color:#9cb7ff;
+
+    margin-bottom:25px;
+
+    font-size:.9rem;
+
+}
+
+.upload-hero h1{
+
+    font-family:"Space Grotesk",sans-serif;
+
+    font-size:clamp(2.6rem,6vw,4.4rem);
+
+    color:#fff;
+
+    margin-bottom:18px;
+
+}
+
+.upload-hero p{
+
+    max-width:720px;
+
+    margin:auto;
+
+    color:#bfc8d8;
+
+    line-height:1.9;
+
+}
+
+
+
+/*------------------------------------
+ Upload Mode
+------------------------------------*/
+
+.upload-mode{
+
+    width:min(1250px,92%);
+
+    margin:80px auto 120px;
+
+}
+
+.mode-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(340px,1fr));
+
+    gap:35px;
+
+}
+
+.mode-card{
+
+    background:rgba(255,255,255,.05);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:28px;
+
+    padding:40px;
+
+    backdrop-filter:blur(18px);
+
+    transition:.35s;
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.mode-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:220px;
+
+    height:220px;
+
+    border-radius:50%;
+
+    right:-90px;
+
+    top:-90px;
+
+    background:rgba(91,124,255,.08);
+
+    transition:.4s;
+
+}
+
+.mode-card:hover{
+
+    transform:translateY(-10px);
+
+    border-color:rgba(91,124,255,.28);
+
+    box-shadow:0 20px 45px rgba(0,0,0,.28);
+
+}
+
+.mode-card:hover::before{
+
+    transform:scale(1.25);
+
+}
+
+.mode-icon{
+
+    width:75px;
+
+    height:75px;
+
+    border-radius:20px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    background:rgba(91,124,255,.12);
+
+    color:#8ea8ff;
+
+    font-size:28px;
+
+    margin-bottom:25px;
+
+}
+
+.mode-card h3{
+
+    color:#fff;
+
+    margin-bottom:15px;
+
+    font-size:1.7rem;
+
+}
+
+.mode-card p{
+
+    color:#bcc6d8;
+
+    line-height:1.8;
+
+    margin-bottom:25px;
+
+}
+
+.mode-card ul{
+
+    list-style:none;
+
+    padding:0;
+
+    margin:0 0 30px;
+
+}
+
+.mode-card ul li{
+
+    color:#c8d0dd;
+
+    padding:8px 0;
+
+}
+
+
+
+/*------------------------------------
+ Upload Section
+------------------------------------*/
+
+.upload-section{
+
+    width:min(1280px,92%);
+
+    margin:120px auto;
+
+}
+
+.upload-wrapper{
+
+    display:grid;
+
+    grid-template-columns:1.05fr .95fr;
+
+    gap:45px;
+
+    align-items:start;
+
+}
+
+
+
+/*------------------------------------
+ Drag & Drop
+------------------------------------*/
+
+.upload-box{
+
+    background:rgba(255,255,255,.05);
+
+    border:2px dashed rgba(255,255,255,.12);
+
+    border-radius:30px;
+
+    padding:60px 35px;
+
+    text-align:center;
+
+    transition:.35s;
+
+    backdrop-filter:blur(18px);
+
+}
+
+.upload-box:hover{
+
+    border-color:#7ea2ff;
+
+    transform:translateY(-6px);
+
+    box-shadow:0 18px 40px rgba(91,124,255,.22);
+
+}
+
+.upload-icon{
+
+    font-size:65px;
+
+    color:#88a4ff;
+
+    margin-bottom:25px;
+
+}
+
+.upload-box h3{
+
+    color:#fff;
+
+    margin-bottom:10px;
+
+}
+
+.upload-box p{
+
+    color:#bcc6d8;
+
+    margin-bottom:22px;
+
+}
+
+.upload-box small{
+
+    display:block;
+
+    margin-top:20px;
+
+    color:#8e99ab;
+
+    line-height:1.7;
+
+}
+
+
+
+/*------------------------------------
+ Preview Card
+------------------------------------*/
+
+.image-preview-card{
+
+    margin-top:35px;
+
+    background:rgba(255,255,255,.05);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:28px;
+
+    padding:28px;
+
+}
+
+.image-preview-card h3{
+
+    color:#fff;
+
+    margin-bottom:25px;
+
+}
+
+.image-preview-card img{
+
+    width:100%;
+
+    aspect-ratio:1;
+
+    object-fit:cover;
+
+    border-radius:22px;
+
+    background:#1a1d24;
+
+}
+
+.preview-buttons{
+
+    display:flex;
+
+    gap:15px;
+
+    margin-top:22px;
+
+}
+
+.preview-buttons button{
+
+    flex:1;
+
+}
+
+
+
+/*------------------------------------
+ Upload Progress
+------------------------------------*/
+
+.upload-progress{
+
+    width:100%;
+
+    height:10px;
+
+    background:rgba(255,255,255,.08);
+
+    border-radius:50px;
+
+    overflow:hidden;
+
+    margin-top:30px;
+
+}
+
+.progress-bar{
+
+    width:0%;
+
+    height:100%;
+
+    border-radius:50px;
+
+    background:linear-gradient(90deg,#5b7cff,#86a4ff);
+
+    transition:.4s;
+
+}
+
+.progress-text{
+
+    margin-top:12px;
+
+    color:#9ea9bc;
+
+    font-size:.9rem;
+
+}
+
+
+
+/*------------------------------------
+ Responsive
+------------------------------------*/
+
+@media(max-width:991px){
+
+.upload-wrapper{
+
+grid-template-columns:1fr;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.upload-hero{
+
+padding:120px 0 70px;
+
+}
+
+.mode-card{
+
+padding:30px;
+
+}
+
+.upload-box{
+
+padding:45px 25px;
+
+}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =====================================================
+   FaceArena Upload CSS
+   Part 2
+   Form + Rules + Tips
+=====================================================*/
+
+
+/*------------------------------------
+ Upload Form
+------------------------------------*/
+
+.upload-right{
+
+    background:rgba(255,255,255,.05);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:30px;
+
+    padding:45px;
+
+    backdrop-filter:blur(18px);
+
+}
+
+.upload-right h2{
+
+    color:#fff;
+
+    font-size:2rem;
+
+    margin-bottom:10px;
+
+}
+
+.upload-right>p{
+
+    color:#bfc7d6;
+
+    margin-bottom:35px;
+
+    line-height:1.7;
+
+}
+
+
+/*------------------------------------
+ Input Group
+------------------------------------*/
+
+.input-group{
+
+    display:flex;
+
+    flex-direction:column;
+
+    margin-bottom:22px;
+
+}
+
+.input-group label{
+
+    color:#d7deeb;
+
+    margin-bottom:10px;
+
+    font-size:.95rem;
+
+    font-weight:600;
+
+}
+
+.input-group input,
+
+.input-group select{
+
+    width:100%;
+
+    padding:15px 18px;
+
+    border-radius:14px;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    background:rgba(255,255,255,.05);
+
+    color:#fff;
+
+    outline:none;
+
+    transition:.3s;
+
+    font-size:15px;
+
+}
+
+.input-group input::placeholder{
+
+    color:#9098aa;
+
+}
+
+.input-group select{
+
+    cursor:pointer;
+
+}
+
+.input-group option{
+
+    background:#16181d;
+
+    color:#fff;
+
+}
+
+.input-group input:focus,
+
+.input-group select:focus{
+
+    border-color:#7f9cff;
+
+    box-shadow:0 0 0 4px rgba(91,124,255,.12);
+
+}
+
+
+
+/*------------------------------------
+ Checkbox
+------------------------------------*/
+
+.checkbox-group{
+
+    margin-top:18px;
+
+}
+
+.checkbox-group label{
+
+    display:flex;
+
+    align-items:flex-start;
+
+    gap:12px;
+
+    color:#bcc7d7;
+
+    line-height:1.7;
+
+    cursor:pointer;
+
+}
+
+.checkbox-group input{
+
+    width:18px;
+
+    height:18px;
+
+    accent-color:#6f90ff;
+
+    margin-top:3px;
+
+}
+
+
+
+/*------------------------------------
+ Upload Button
+------------------------------------*/
+
+.upload-btn{
+
+    width:100%;
+
+    margin-top:35px;
+
+    padding:16px;
+
+    border:none;
+
+    border-radius:16px;
+
+    font-size:16px;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+}
+
+.upload-btn i{
+
+    margin-right:10px;
+
+}
+
+.upload-btn:hover{
+
+    transform:translateY(-4px);
+
+}
+
+
+
+/*------------------------------------
+ Rules Section
+------------------------------------*/
+
+.upload-rules{
+
+    width:min(1250px,92%);
+
+    margin:120px auto;
+
+}
+
+.rules-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+
+    gap:35px;
+
+}
+
+.rule-card{
+
+    background:rgba(255,255,255,.05);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:26px;
+
+    padding:35px;
+
+    transition:.35s;
+
+}
+
+.rule-card:hover{
+
+    transform:translateY(-8px);
+
+    border-color:#7c9bff;
+
+}
+
+.rule-card i{
+
+    font-size:42px;
+
+    margin-bottom:22px;
+
+}
+
+.rule-card:first-child i{
+
+    color:#3ddc84;
+
+}
+
+.rule-card:last-child i{
+
+    color:#ff6a6a;
+
+}
+
+.rule-card h3{
+
+    color:#fff;
+
+    margin-bottom:20px;
+
+}
+
+.rule-card ul{
+
+    padding-left:20px;
+
+}
+
+.rule-card li{
+
+    color:#bfc7d6;
+
+    line-height:2;
+
+}
+
+
+
+/*------------------------------------
+ Upload Tips
+------------------------------------*/
+
+.upload-tips{
+
+    width:min(1250px,92%);
+
+    margin:120px auto;
+
+}
+
+.tips-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+
+    gap:30px;
+
+}
+
+.tip-card{
+
+    background:rgba(255,255,255,.05);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:24px;
+
+    padding:35px;
+
+    transition:.35s;
+
+}
+
+.tip-card:hover{
+
+    transform:translateY(-8px);
+
+    border-color:#7d9dff;
+
+    box-shadow:0 18px 35px rgba(0,0,0,.25);
+
+}
+
+.tip-card i{
+
+    width:70px;
+
+    height:70px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-radius:18px;
+
+    font-size:28px;
+
+    color:#88a4ff;
+
+    background:rgba(91,124,255,.10);
+
+    margin-bottom:22px;
+
+}
+
+.tip-card h3{
+
+    color:#fff;
+
+    margin-bottom:15px;
+
+}
+
+.tip-card p{
+
+    color:#b8c3d5;
+
+    line-height:1.8;
+
+}
+
+
+
+/*------------------------------------
+ Small Responsive
+------------------------------------*/
+
+@media(max-width:768px){
+
+.upload-right{
+
+padding:30px;
+
+}
+
+.rules-grid,
+
+.tips-grid{
+
+grid-template-columns:1fr;
+
+}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =====================================================
+   FaceArena Upload CSS
+   Part 3
+   FAQ • Support • Footer • Final Polish
+=====================================================*/
+
+
+/*------------------------------------
+ FAQ Section
+------------------------------------*/
+
+.upload-faq{
+
+    width:min(1250px,92%);
+    margin:120px auto;
+
+}
+
+.faq-list{
+
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+
+}
+
+.faq-list details{
+
+    background:rgba(255,255,255,.05);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:18px;
+
+    overflow:hidden;
+
+    transition:.35s;
+
+}
+
+.faq-list details:hover{
+
+    border-color:#7c9cff;
+
+}
+
+.faq-list summary{
+
+    list-style:none;
+
+    cursor:pointer;
+
+    padding:22px 28px;
+
+    color:#fff;
+
+    font-weight:600;
+
+    font-size:17px;
+
+    position:relative;
+
+}
+
+.faq-list summary::-webkit-details-marker{
+
+    display:none;
+
+}
+
+.faq-list summary::after{
+
+    content:"+";
+
+    position:absolute;
+
+    right:25px;
+
+    top:20px;
+
+    font-size:24px;
+
+    transition:.3s;
+
+}
+
+.faq-list details[open] summary::after{
+
+    content:"−";
+
+}
+
+.faq-list p{
+
+    padding:0 28px 25px;
+
+    color:#bcc6d6;
+
+    line-height:1.9;
+
+}
+
+
+
+/*------------------------------------
+ Support Section
+------------------------------------*/
+
+.support-section{
+
+    width:min(1250px,92%);
+    margin:120px auto;
+
+}
+
+.support-box{
+
+    padding:70px 40px;
+
+    text-align:center;
+
+    border-radius:30px;
+
+    background:linear-gradient(135deg,#182132,#11151d);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.support-box::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:300px;
+
+    height:300px;
+
+    border-radius:50%;
+
+    background:rgba(91,124,255,.08);
+
+    top:-140px;
+
+    right:-120px;
+
+}
+
+.support-box i{
+
+    font-size:60px;
+
+    color:#8aa7ff;
+
+    margin-bottom:25px;
+
+}
+
+.support-box h2{
+
+    color:#fff;
+
+    margin-bottom:18px;
+
+    font-size:2.3rem;
+
+}
+
+.support-box p{
+
+    max-width:650px;
+
+    margin:auto;
+
+    color:#bcc6d6;
+
+    line-height:1.9;
+
+    margin-bottom:35px;
+
+}
+
+
+
+/*------------------------------------
+ Upload Footer
+------------------------------------*/
+
+.footer{
+
+    margin-top:120px;
+
+    background:#101318;
+
+    border-top:1px solid rgba(255,255,255,.08);
+
+}
+
+.footer-container{
+
+    display:grid;
+
+    grid-template-columns:2fr 1fr 1fr;
+
+    gap:40px;
+
+    padding:70px 0;
+
+}
+
+.footer-brand h2{
+
+    color:#fff;
+
+    margin-bottom:15px;
+
+}
+
+.footer-brand p{
+
+    color:#aeb8c8;
+
+    line-height:1.8;
+
+}
+
+.footer-links{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:14px;
+
+}
+
+.footer-links a{
+
+    color:#c5cfdd;
+
+    transition:.3s;
+
+}
+
+.footer-links a:hover{
+
+    color:#8ba8ff;
+
+    padding-left:6px;
+
+}
+
+.footer-social{
+
+    display:flex;
+
+    gap:18px;
+
+    align-items:flex-start;
+
+}
+
+.footer-social a{
+
+    width:45px;
+
+    height:45px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    background:rgba(255,255,255,.05);
+
+    color:#fff;
+
+    transition:.35s;
+
+}
+
+.footer-social a:hover{
+
+    transform:translateY(-6px);
+
+    background:#5b7cff;
+
+}
+
+.copyright{
+
+    text-align:center;
+
+    padding:25px;
+
+    border-top:1px solid rgba(255,255,255,.08);
+
+    color:#98a3b4;
+
+}
+
+
+
+/*------------------------------------
+ Hover Animation
+------------------------------------*/
+
+.mode-card,
+.tip-card,
+.rule-card,
+.upload-right,
+.image-preview-card{
+
+    transition:.35s ease;
+
+}
+
+.mode-card:hover,
+.tip-card:hover,
+.rule-card:hover,
+.upload-right:hover,
+.image-preview-card:hover{
+
+    box-shadow:0 20px 45px rgba(0,0,0,.28);
+
+}
+
+
+
+/*------------------------------------
+ Scroll Animation Ready
+------------------------------------*/
+
+.reveal{
+
+    opacity:0;
+
+    transform:translateY(50px);
+
+    transition:1s;
+
+}
+
+.reveal.active{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+
+
+
+/*------------------------------------
+ Responsive
+------------------------------------*/
+
+@media(max-width:992px){
+
+.footer-container{
+
+grid-template-columns:1fr;
+
+text-align:center;
+
+}
+
+.footer-social{
+
+justify-content:center;
+
+}
+
+.support-box{
+
+padding:50px 30px;
+
+}
+
+}
+
+
+
+@media(max-width:768px){
+
+.upload-hero h1{
+
+font-size:2.4rem;
+
+}
+
+.hero-badge{
+
+font-size:14px;
+
+}
+
+.support-box h2{
+
+font-size:1.8rem;
+
+}
+
+.footer{
+
+margin-top:80px;
+
+}
+
+}
+
+
+
+@media(max-width:480px){
+
+.upload-box{
+
+padding:35px 20px;
+
+}
+
+.upload-icon{
+
+font-size:48px;
+
+}
+
+.mode-card{
+
+padding:25px;
+
+}
+
+.upload-right{
+
+padding:25px;
+
+}
+
+.support-box{
+
+padding:40px 20px;
+
+}
+
+.footer-container{
+
+padding:50px 0;
+
+}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*------------------------------
+ Navbar
+------------------------------*/
+
+.header{
+
+position:fixed;
+
+top:18px;
+
+width:100%;
+
+display:flex;
+
+justify-content:center;
+
+z-index:500;
+
+}
+
+.navbar{
+
+width:min(1180px,92%);
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+padding:18px 28px;
+
+background:rgba(255,255,255,.06);
+
+border:1px solid rgba(255,255,255,.12);
+
+backdrop-filter:blur(20px);
+
+border-radius:20px;
+
+box-shadow:var(--shadow);
+
+}
+
+.logo{
+
+display:flex;
+
+align-items:center;
+
+gap:12px;
+
+font-size:24px;
+
+font-weight:700;
+
+font-family:"Space Grotesk",sans-serif;
+
+}
+
+.logo i{
+
+color:#ffd34d;
+
+}
+
+.nav-links{
+
+display:flex;
+
+gap:34px;
+
+list-style:none;
+
+}
+
+.nav-links a{
+
+color:var(--text);
+
+text-decoration:none;
+
+transition:.35s;
+
+font-weight:500;
+
+}
+
+.nav-links a:hover{
+
+color:white;
+
+}
+
+.nav-buttons{
+
+display:flex;
+
+gap:15px;
+
+}
+
+.login-btn,
+
+.upload-btn,
+
+.primary-btn,
+
+.secondary-btn{
+
+padding:14px 24px;
+
+border-radius:14px;
+
+border:none;
+
+font-weight:600;
+
+cursor:pointer;
+
+transition:.35s;
+
+}
+
+.login-btn{
+
+background:transparent;
+
+border:1px solid rgba(255,255,255,.15);
+
+color:white;
+
+}
+
+.upload-btn,
+
+.primary-btn{
+
+background:var(--primary);
+
+color:white;
+
+}
+
+.secondary-btn{
+
+background:rgba(255,255,255,.08);
+
+border:1px solid rgba(255,255,255,.12);
+
+color:white;
+
+}
+
+.primary-btn:hover,
+
+.upload-btn:hover{
+
+transform:translateY(-3px);
+
+box-shadow:0 18px 40px rgba(91,124,255,.35);
+
+}
+
+.secondary-btn:hover,
+
+.login-btn:hover{
+
+background:rgba(255,255,255,.12);
+
+}
+
+/*------------------------------
+ Hero
+------------------------------*/
+
+.hero{
+
+min-height:100vh;
+
+display:grid;
+
+grid-template-columns:1fr 1fr;
+
+align-items:center;
+
+gap:70px;
+
+width:min(1180px,92%);
+
+margin:auto;
+
+padding-top:140px;
+
+padding-bottom:80px;
+
+}
+
+.hero-tag{
+
+display:inline-block;
+
+padding:10px 18px;
+
+border-radius:50px;
+
+background:rgba(255,255,255,.06);
+
+border:1px solid rgba(255,255,255,.12);
+
+margin-bottom:25px;
+
+font-size:14px;
+
+}
+
+.hero h1{
+
+font-size:clamp(3rem,7vw,5.6rem);
+
+line-height:1.05;
+
+font-family:"Space Grotesk",sans-serif;
+
+margin-bottom:28px;
+
+}
+
+.hero h1 span{
+
+color:var(--secondary);
+
+}
+
+.hero-description{
+
+max-width:620px;
+
+font-size:19px;
+
+line-height:1.8;
+
+color:var(--text);
+
+margin-bottom:35px;
+
+}
+
+.hero-buttons{
+
+display:flex;
+
+gap:18px;
+
+margin-bottom:45px;
+
+}
+
+.hero-stats{
+
+display:flex;
+
+gap:28px;
+
+}
+
+.mini-stat{
+
+background:rgba(255,255,255,.05);
+
+padding:18px 26px;
+
+border-radius:18px;
+
+border:1px solid rgba(255,255,255,.08);
+
+}
+
+.mini-stat h2{
+
+font-size:28px;
+
+margin-bottom:8px;
+
+}
+
+.mini-stat p{
+
+color:var(--text);
+
+}
+
+/*------------------------------
+ Phone Mockup
+------------------------------*/
+
+.phone-frame{
+
+width:340px;
+
+margin:auto;
+
+padding:18px;
+
+background:rgba(255,255,255,.08);
+
+border-radius:38px;
+
+border:1px solid rgba(255,255,255,.12);
+
+backdrop-filter:blur(25px);
+
+box-shadow:var(--shadow);
+
+}
+
+.phone-header{
+
+text-align:center;
+
+padding:15px;
+
+font-weight:700;
+
+}
+
+.top-photo img{
+
+width:100%;
+
+height:260px;
+
+object-fit:cover;
+
+border-radius:20px;
+
+margin-bottom:16px;
+
+}
+
+.bottom-photos{
+
+display:grid;
+
+grid-template-columns:1fr 1fr;
+
+gap:14px;
+
+}
+
+.bottom-photos img{
+
+width:100%;
+
+height:150px;
+
+object-fit:cover;
+
+border-radius:18px;
+
+}
+
+.vote-info{
+
+text-align:center;
+
+margin-top:20px;
+
+font-weight:600;
+
+color:var(--secondary);
+
+}
+
