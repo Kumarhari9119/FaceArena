@@ -1,0 +1,997 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- ========================================= -->
+    <!-- FaceArena v1.0 -->
+    <!-- Premium Ranking Platform -->
+    <!-- Developed with ❤️ -->
+    <!-- ========================================= -->
+
+    <meta charset="UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>
+        FaceArena • Upload • Vote • Rank
+    </title>
+
+    <meta name="description"
+        content="FaceArena is the ultimate photo ranking platform where users upload photos and the community ranks them through live arena battles.">
+
+    <meta name="keywords"
+        content="FaceArena, Ranking, Face Rating, Photo Contest, Voting, Arena">
+
+    <meta name="author"
+        content="Hari Nandan Kumar">
+
+    <meta property="og:title"
+        content="FaceArena">
+
+    <meta property="og:description"
+        content="Upload. Vote. Rank. Become #1">
+
+    <meta property="og:image"
+        content="assets/images/cover.jpg">
+
+    <meta property="og:type"
+        content="website">
+
+    <meta name="theme-color"
+        content="#070B17">
+
+    <link rel="icon"
+        href="assets/logo/favicon.png">
+
+    <!-- GOOGLE FONT -->
+
+    <link rel="preconnect"
+        href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+
+    <!-- FONT AWESOME -->
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- CSS -->
+     <link rel="stylesheet" href="css/style.css">
+
+
+
+
+
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/hero.css">
+    <link rel="stylesheet" href="css/cards.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+</head>
+
+<body>
+
+<!--========================================-->
+
+<div id="loader">
+
+    <div class="loader-logo">
+
+        FaceArena
+
+    </div>
+
+    <div class="loader-ring"></div>
+
+</div>
+
+<!--========================================-->
+
+<div id="cursor"></div>
+
+<div id="cursor-blur"></div>
+
+<!--========================================-->
+
+<div class="background-wrapper">
+
+    <div class="aurora aurora1"></div>
+
+    <div class="aurora aurora2"></div>
+
+    <div class="aurora aurora3"></div>
+
+    <div id="particles-js"></div>
+
+</div>
+
+<!--========================================-->
+
+<header class="header">
+
+<nav class="navbar">
+
+<div class="logo">
+
+<i class="fa-solid fa-crown"></i>
+
+<span>
+
+FaceArena
+
+</span>
+
+</div>
+
+<ul class="nav-links">
+
+<li>
+
+<a href="index.html">
+
+Home
+
+</a>
+
+</li>
+
+<li>
+
+<a href="arena.html">
+
+Arena
+
+</a>
+
+</li>
+
+<li>
+
+<a href="leaderboard.html">
+
+Leaderboard
+
+</a>
+
+</li>
+
+<li>
+
+<a href="upload.html">
+
+Upload
+
+</a>
+
+</li>
+
+<li>
+
+<a href="about.html">
+
+About
+
+</a>
+
+</li>
+
+</ul>
+
+<div class="nav-buttons">
+
+<button class="login-btn">
+
+Login
+
+</button>
+
+<button class="upload-btn">
+
+Upload
+
+</button>
+
+</div>
+
+<div class="mobile-menu">
+
+<i class="fa-solid fa-bars"></i>
+
+</div>
+
+</nav>
+
+</header>
+
+<!--========================================-->
+
+<section class="hero">
+
+<div class="hero-left">
+
+<p class="hero-tag">
+
+🔥 World's Ultimate Face Ranking Platform
+
+</p>
+
+<h1>
+
+Upload
+
+<span>
+
+Compete
+
+</span>
+
+Rise To
+
+<span>
+
+#1
+
+</span>
+
+</h1>
+
+<p class="hero-description">
+
+FaceArena lets people upload photos,
+
+battle in real-time,
+
+and climb the global ranking
+
+through community voting.
+
+Every click changes the leaderboard.
+
+</p>
+
+<div class="hero-buttons">
+
+<button class="primary-btn">
+
+Start Voting
+
+</button>
+
+<button class="secondary-btn">
+
+Upload Photo
+
+</button>
+
+</div>
+
+<div class="hero-stats">
+
+<div class="mini-stat">
+
+<h2>
+
+2.8M+
+
+</h2>
+
+<p>
+
+Votes
+
+</p>
+
+</div>
+
+<div class="mini-stat">
+
+<h2>
+
+380K
+
+</h2>
+
+<p>
+
+Photos
+
+</p>
+
+</div>
+
+<div class="mini-stat">
+
+<h2>
+
+140+
+
+</h2>
+
+<p>
+
+Countries
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+<!--========================================-->
+
+<div class="hero-right">
+
+<div class="phone-frame">
+
+<div class="phone-header">
+
+Arena Live
+
+</div>
+
+<div class="arena-preview">
+
+<div class="top-photo">
+
+<img src="assets/demoimages/person1.jpg">
+
+</div>
+
+<div class="bottom-photos">
+
+<img src="assets/demoimages/person2.jpg">
+
+<img src="assets/demoimages/person3.jpg">
+
+</div>
+
+</div>
+
+<div class="vote-info">
+
+<span>
+
+Choose The Best
+
+</span>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!--========================================-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- ======================================== -->
+<!-- LIVE STATISTICS -->
+<!-- ======================================== -->
+
+<section class="live-stats" id="statistics">
+
+    <div class="section-title">
+
+        <p>LIVE PLATFORM</p>
+
+        <h2>Real-Time FaceArena Statistics</h2>
+
+    </div>
+
+    <div class="stats-grid">
+
+        <div class="stat-card">
+
+            <i class="fa-solid fa-fire"></i>
+
+            <h3 class="counter" data-target="2849311">0</h3>
+
+            <p>Total Votes</p>
+
+        </div>
+
+        <div class="stat-card">
+
+            <i class="fa-solid fa-image"></i>
+
+            <h3 class="counter" data-target="382193">0</h3>
+
+            <p>Photos Uploaded</p>
+
+        </div>
+
+        <div class="stat-card">
+
+            <i class="fa-solid fa-users"></i>
+
+            <h3 class="counter" data-target="17402">0</h3>
+
+            <p>Active Users</p>
+
+        </div>
+
+        <div class="stat-card">
+
+            <i class="fa-solid fa-globe"></i>
+
+            <h3 class="counter" data-target="143">0</h3>
+
+            <p>Countries</p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ======================================== -->
+<!-- HOW IT WORKS -->
+<!-- ======================================== -->
+
+<section class="how-it-works">
+
+    <div class="section-title">
+
+        <p>HOW IT WORKS</p>
+
+        <h2>Simple • Fast • Fair</h2>
+
+    </div>
+
+    <div class="steps">
+
+        <div class="step">
+
+            <div class="step-number">01</div>
+
+            <i class="fa-solid fa-upload"></i>
+
+            <h3>Upload</h3>
+
+            <p>Upload your own photo or submit a guest entry.</p>
+
+        </div>
+
+        <div class="step">
+
+            <div class="step-number">02</div>
+
+            <i class="fa-solid fa-people-group"></i>
+
+            <h3>Community Votes</h3>
+
+            <p>Thousands of users compare three photos together.</p>
+
+        </div>
+
+        <div class="step">
+
+            <div class="step-number">03</div>
+
+            <i class="fa-solid fa-ranking-star"></i>
+
+            <h3>Rank Up</h3>
+
+            <p>Your position updates instantly using the ranking engine.</p>
+
+        </div>
+
+        <div class="step">
+
+            <div class="step-number">04</div>
+
+            <i class="fa-solid fa-crown"></i>
+
+            <h3>Become #1</h3>
+
+            <p>Reach the top leaderboard and earn badges.</p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ======================================== -->
+<!-- FEATURES -->
+<!-- ======================================== -->
+
+<section class="features">
+
+    <div class="section-title">
+
+        <p>FEATURES</p>
+
+        <h2>Everything You Need</h2>
+
+    </div>
+
+    <div class="feature-grid">
+
+        <div class="feature-card">
+
+            <i class="fa-solid fa-bolt"></i>
+
+            <h3>Lightning Fast</h3>
+
+            <p>Instant voting without page refresh.</p>
+
+        </div>
+
+        <div class="feature-card">
+
+            <i class="fa-solid fa-shield"></i>
+
+            <h3>Secure</h3>
+
+            <p>Spam protection and anti-cheat architecture.</p>
+
+        </div>
+
+        <div class="feature-card">
+
+            <i class="fa-solid fa-chart-line"></i>
+
+            <h3>Live Ranking</h3>
+
+            <p>Every vote updates rankings automatically.</p>
+
+        </div>
+
+        <div class="feature-card">
+
+            <i class="fa-solid fa-mobile-screen"></i>
+
+            <h3>Responsive</h3>
+
+            <p>Works beautifully on every device.</p>
+
+        </div>
+
+        <div class="feature-card">
+
+            <i class="fa-solid fa-medal"></i>
+
+            <h3>Achievements</h3>
+
+            <p>Unlock levels, XP and badges.</p>
+
+        </div>
+
+        <div class="feature-card">
+
+            <i class="fa-solid fa-cloud-arrow-up"></i>
+
+            <h3>Cloud Upload</h3>
+
+            <p>Safe and optimized image storage.</p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ======================================== -->
+<!-- LIVE ARENA PREVIEW -->
+<!-- ======================================== -->
+
+<section class="arena-section" id="arena">
+
+    <div class="section-title">
+
+        <p>LIVE ARENA</p>
+
+        <h2>Choose The Best Face</h2>
+
+    </div>
+
+    <div class="arena-container">
+
+        <div class="arena-top">
+
+            <img src="assets/demoimages/person4.jpg" alt="">
+
+        </div>
+
+        <div class="arena-bottom">
+
+            <img src="assets/demoimages/person5.jpg" alt="">
+
+            <img src="assets/demoimages/person6.jpg" alt="">
+
+        </div>
+
+        <button class="arena-btn">
+
+            Start Arena
+
+        </button>
+
+    </div>
+
+</section>
+
+<!-- ======================================== -->
+<!-- LEADERBOARD -->
+<!-- ======================================== -->
+
+<section class="leaderboard-preview" id="leaderboard">
+
+    <div class="section-title">
+
+        <p>TOP PLAYERS</p>
+
+        <h2>Today's Champions</h2>
+
+    </div>
+
+    <div class="leaderboard-cards">
+
+        <div class="leader-card gold">
+
+            <span>#1</span>
+
+            <img src="assets/demoimages/person7.jpg">
+
+            <h3>Alex</h3>
+
+            <p>Rating : 2842</p>
+
+        </div>
+
+        <div class="leader-card silver">
+
+            <span>#2</span>
+
+            <img src="assets/demoimages/person8.jpg">
+
+            <h3>Emma</h3>
+
+            <p>Rating : 2820</p>
+
+        </div>
+
+        <div class="leader-card bronze">
+
+            <span>#3</span>
+
+            <img src="assets/demoimages/person9.jpg">
+
+            <h3>Lucas</h3>
+
+            <p>Rating : 2793</p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ======================================== -->
+<!-- CALL TO ACTION -->
+<!-- ======================================== -->
+
+<section class="cta-section">
+
+    <div class="cta-box">
+
+        <h2>
+
+            Ready To Enter FaceArena?
+
+        </h2>
+
+        <p>
+
+            Upload your best photo and compete with thousands of people worldwide.
+
+        </p>
+
+        <div class="cta-buttons">
+
+            <button class="primary-btn">
+
+                Upload Now
+
+            </button>
+
+            <button class="secondary-btn">
+
+                Explore Arena
+
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- ======================================== -->
+<!-- NEWSLETTER -->
+<!-- ======================================== -->
+
+<section class="newsletter">
+
+    <div class="newsletter-container">
+
+        <div class="newsletter-left">
+
+            <h2>Stay Updated</h2>
+
+            <p>
+                Get notified about new features,
+                tournaments and weekly champions.
+            </p>
+
+        </div>
+
+        <div class="newsletter-right">
+
+            <form>
+
+                <input
+                    type="email"
+                    placeholder="Enter your email">
+
+                <button type="submit">
+
+                    Subscribe
+
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+<!-- ======================================== -->
+<!-- PREMIUM FOOTER -->
+<!-- ======================================== -->
+
+<footer class="footer">
+
+    <div class="footer-top">
+
+        <div class="footer-brand">
+
+            <h2>
+                <i class="fa-solid fa-crown"></i>
+                FaceArena
+            </h2>
+
+            <p>
+                Upload your best photo.
+                Compete with the world.
+                Become the #1 ranked face.
+            </p>
+
+           
+
+    <div class="footer-middle">
+
+        <div class="footer-column">
+
+            <h3>Navigation</h3>
+ <a href="index.html">Home</a>
+
+            <a href="arena.html">Arena</a>
+
+            <a href="leaderboard.html">Leaderboard</a>
+
+            <a href="upload.html">Upload</a>
+
+            <a href="about.html">About</a>
+
+        </div>
+
+        <div class="footer-column">
+
+            <h3>Resources</h3>
+
+            <a href="#">Privacy Policy</a>
+
+            <a href="#">Terms & Conditions</a>
+
+            <a href="#">Rules</a>
+
+            <a href="#">FAQ</a>
+
+            <a href="#">Support</a>
+
+        </div>
+
+        <div class="footer-column">
+
+            <h3>Community</h3>
+
+            <div class="footer-stat">
+
+                <strong>2.8M+</strong>
+
+                <span>Total Votes</span>
+
+            </div>
+
+            <div class="footer-stat">
+
+                <strong>380K</strong>
+
+                <span>Photos</span>
+
+            </div>
+
+            <div class="footer-stat">
+
+                <strong>17K+</strong>
+
+                <span>Active Users</span>
+
+            </div>
+
+        </div>
+
+        <div class="footer-column">
+
+            <h3>Contact</h3>
+
+            <p>support@facearena.com</p>
+
+            <p>India</p>
+
+            <p>Available 24×7</p>
+
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+
+ <div class="social-icons">
+
+                <a href="https://www.facebook.com/adarsh.gram.derhgaon"target="_blank"
+                     rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/kumarhari91119/"><i class="fab fa-instagram"></i></a>
+
+                <a href="#"><i class="fab fa-x-twitter"></i></a>
+
+                <a href="https://wa.me/+917520339597" target="_blank" aria-label="WhatsApp">
+                       <i class="fab fa-whatsapp"></i>
+
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+    <div class="footer-bottom">
+
+        <p>© 2026 FaceArena. All Rights Reserved.</p>
+
+        <p>Designed & Developed with ❤️ by Harinandan Kumar</p>
+
+    </div>
+
+</footer>
+
+
+
+<!-- ======================================== -->
+<!-- SCROLL TO TOP -->
+<!-- ======================================== -->
+
+<button id="scrollTop">
+
+    <i class="fa-solid fa-arrow-up"></i>
+
+</button>
+
+<!-- ======================================== -->
+<!-- SCRIPTS -->
+<!-- ======================================== -->
+
+<!-- GSAP -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"></script>
+
+<!-- PARTICLES -->
+
+<script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+
+<!-- LOTTIE -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.12.2/lottie.min.js"></script>
+
+<!-- CUSTOM -->
+
+<script src="js/utils.js"></script>
+
+<script src="js/navbar.js"></script>
+
+<script src="js/cursor.js"></script>
+
+<script src="js/counters.js"></script>
+
+<script src="js/animations.js"></script>
+
+<script src="js/app.js"></script>
+
+</body>
+
+</html>
