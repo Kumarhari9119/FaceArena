@@ -13,7 +13,7 @@ import {
 
 // Keep the same Firebase configuration as your current index.html.
 const firebaseConfig = {
-  apiKey: "AIzaSyAub9AZe1jPmj2cCQkDUrPA8gyYA00I_AYI_KEY",
+  apiKey: "AIzaSyAub9AZe1jPmj2cCQkDUrPA8gyYA00I_AY",
   authDomain: "facearena-2bc96.firebaseapp.com",
   projectId: "facearena-2bc96",
   storageBucket: "facearena-2bc96.firebasestorage.app",
