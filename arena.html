@@ -81,6 +81,7 @@
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/layout.css">
     <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/arena.css">
     <link rel="stylesheet" href="css/hero.css">
     <link rel="stylesheet" href="css/cards.css">
     <link rel="stylesheet" href="css/footer.css">
@@ -229,45 +230,48 @@ Upload
 
 
 
+<!-- ================= ARENA GALLERY ================= -->
 
+<main class="arena-page">
 
+  <section class="arena-heading">
+    <div class="arena-eyebrow">
+      <i class="fa-solid fa-trophy"></i>
+      THE COMMUNITY ARENA
+    </div>
 
+    <h1>
+      Discover the <span>Arena</span>
+    </h1>
 
+    <p>
+      Explore approved community photos.
+      Every great contender starts somewhere.
+    </p>
+  </section>
 
+  <section aria-label="Approved photo gallery">
 
+    <div class="arena-toolbar">
+      <span id="arenaCount">Loading photos...</span>
 
+      <button id="arenaRefresh" class="arena-refresh" type="button">
+        <i class="fa-solid fa-rotate"></i>
+        Refresh
+      </button>
+    </div>
 
+    <div id="arenaMessage" class="arena-message" role="status">
+      Loading approved photos...
+    </div>
 
+    <div id="arenaGallery" class="arena-grid"></div>
 
+  </section>
 
+</main>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<!-- ================= END ARENA GALLERY ================= -->
 
 
 
@@ -442,6 +446,7 @@ Upload
 <!-- PARTICLES -->
 
 <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+<scriptsrc="js/arena.js"></script>
 
 <!-- LOTTIE -->
 
@@ -450,6 +455,26 @@ Upload
 <!-- CUSTOM -->
 
 
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    const loader = document.getElementById("loader");
+
+    function hideLoader() {
+        if (loader) {
+            loader.classList.add("loader-hidden");
+        }
+    }
+
+    // Hide loader when the page finishes loading
+    window.addEventListener("load", hideLoader);
+
+    // Fallback: prevent the loader from staying forever
+    setTimeout(hideLoader, 3000);
+
+});
+</script>
 
 </body>
 
