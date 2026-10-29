@@ -142,3 +142,78 @@
     align-items: flex-start;
   }
 }
+
+
+
+
+
+
+
+
+
+
+/* ===============================
+   FaceArena Star Rating
+================================ */
+
+.arena-rating {
+  margin-top: 18px;
+  padding-top: 15px;
+  border-top: 1px solid var(--border);
+}
+
+.arena-rating-heading {
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.arena-rating-average {
+  color: var(--text);
+  font-size: 13px;
+  margin-bottom: 8px;
+}
+
+.arena-rating-stars {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.arena-rating-star {
+  border: 0;
+  background: transparent;
+  color: #7b8193;
+  font-size: 29px;
+  line-height: 1.2;
+  padding: 2px;
+  cursor: pointer;
+  transition: color .2s ease, transform .2s ease;
+}
+
+.arena-rating-star:hover {
+  color: #ffc83d;
+  transform: scale(1.12);
+}
+
+.arena-rating-star.is-selected {
+  color: #ffc83d;
+}
+
+.arena-rating-star:disabled {
+  cursor: wait;
+  opacity: .65;
+}
+
+.arena-rating-note {
+  color: var(--text);
+  font-size: 12px;
+  margin-top: 7px;
+  line-height: 1.5;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .arena-rating-star {
+    transition: none;
+  }
+}
