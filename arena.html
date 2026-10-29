@@ -446,7 +446,7 @@ Upload
 <!-- PARTICLES -->
 
 <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
-<scriptsrc="js/arena.js"></script>
+<script type="module" src="js/arena.js"></script>
 
 <!-- LOTTIE -->
 
@@ -457,24 +457,29 @@ Upload
 
 
 <script>
-document.addEventListener("DOMContentLoaded", function () {
-
+(function () {
+  function hideLoader() {
     const loader = document.getElementById("loader");
 
-    function hideLoader() {
-        if (loader) {
-            loader.classList.add("loader-hidden");
-        }
+    if (loader) {
+      loader.classList.add("loader-hidden");
+      loader.style.opacity = "0";
+      loader.style.visibility = "hidden";
+      loader.style.pointerEvents = "none";
     }
+  }
 
-    // Hide loader when the page finishes loading
-    window.addEventListener("load", hideLoader);
+  if (document.readyState === "complete") {
+    hideLoader();
+  } else {
+    window.addEventListener("load", hideLoader, { once: true });
+  }
 
-    // Fallback: prevent the loader from staying forever
-    setTimeout(hideLoader, 3000);
-
-});
+  // Fallback: loader should never remain stuck
+  setTimeout(hideLoader, 2000);
+})();
 </script>
+
 
 </body>
 
