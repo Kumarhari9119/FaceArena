@@ -1122,42 +1122,106 @@
 
 <script>
 document.addEventListener("DOMContentLoaded", function () {
-  const fileInput = document.getElementById("facearena-file-input");
-  const status = document.getElementById("upload-status");
+  const imageInput = document.getElementById("imageInput");
+  const previewImage = document.getElementById("previewImage");
+  const previewCard = document.getElementById("previewCard");
+  const dropZone = document.getElementById("dropZone");
+  const browseBtn = document.getElementById("browseBtn");
 
-  const uploadButtons = document.querySelectorAll(
-    ".upload-btn, .secondary-btn, .primary-btn"
-  );
+  const replaceBtn = previewCard.querySelector(".secondary-btn");
+  const removeBtn = previewCard.querySelector(".danger-btn");
 
-  uploadButtons.forEach(function (button) {
-    button.addEventListener("click", function (event) {
-      event.preventDefault();
-      fileInput.click();
-    });
+  // Preview ko shuru mein hide rakho
+  previewCard.style.display = "none";
+
+  // Choose Image button
+  browseBtn.addEventListener("click", function () {
+    imageInput.click();
   });
 
-  fileInput.addEventListener("change", function () {
-    const file = fileInput.files[0];
+  // Upload box par click karne se file picker open ho
+  dropZone.addEventListener("click", function (event) {
+    if (event.target.closest("button")) return;
+    imageInput.click();
+  });
+
+  // Image select hone par preview dikhao
+  imageInput.addEventListener("change", function () {
+    const file = imageInput.files[0];
 
     if (!file) return;
 
     if (!file.type.startsWith("image/")) {
-      status.textContent = "Please select an image file.";
-      fileInput.value = "";
+      alert("Please select a valid image.");
+      imageInput.value = "";
       return;
     }
 
-    status.textContent = "Image selected: " + file.name;
+    if (file.size > 5 * 1024 * 1024) {
+      alert("Image size 5 MB se kam honi chahiye.");
+      imageInput.value = "";
+      return;
+    }
+
+    const imageURL = URL.createObjectURL(file);
+
+    previewImage.onload = function () {
+      previewCard.style.display = "block";
+    };
+
+    previewImage.src = imageURL;
+  });
+
+  // Replace button
+  replaceBtn.addEventListener("click", function () {
+    imageInput.click();
+  });
+
+  // Remove button
+  removeBtn.addEventListener("click", function () {
+    previewImage.removeAttribute("src");
+    previewCard.style.display = "none";
+    imageInput.value = "";
+  });
+
+  // Drag and drop support
+  dropZone.addEventListener("dragover", function (event) {
+    event.preventDefault();
+    dropZone.classList.add("is-dragover");
+  });
+
+  dropZone.addEventListener("dragleave", function () {
+    dropZone.classList.remove("is-dragover");
+  });
+
+  dropZone.addEventListener("drop", function (event) {
+    event.preventDefault();
+    dropZone.classList.remove("is-dragover");
+
+    const file = event.dataTransfer.files[0];
+    if (!file) return;
+
+    if (!file.type.startsWith("image/")) {
+      alert("Please drop a valid image.");
+      return;
+    }
+
+    if (file.size > 5 * 1024 * 1024) {
+      alert("Image size 5 MB se kam honi chahiye.");
+      return;
+    }
+
+    // Dropped file ko input mein set karna zaroori hai
+    const dataTransfer = new DataTransfer();
+    dataTransfer.items.add(file);
+    imageInput.files = dataTransfer.files;
+
+    imageInput.dispatchEvent(new Event("change"));
   });
 });
 </script>
 <!-- Hidden photo picker -->
-<input
-  type="file"
-  id="facearena-file-input"
-  accept="image/*"
-  hidden
-/>
+
 
 <p id="upload-status" role="status"></p>
 </body>
