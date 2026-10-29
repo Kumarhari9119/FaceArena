@@ -229,11 +229,47 @@ Upload
 
 
 
+<main class="profile-page">
+  <section class="profile-heading">
+    <div class="profile-avatar"><i class="fa-solid fa-user"></i></div>
+    <p class="profile-eyebrow">CONTESTANT DASHBOARD</p>
+    <h1>My <span>Profile</span></h1>
+    <p>Track your submissions and see how your photos perform.</p>
+  </section>
 
+  <section class="profile-summary">
+    <article class="profile-stat">
+      <span>My Photos</span>
+      <strong id="myPhotoCount">—</strong>
+    </article>
+    <article class="profile-stat">
+      <span>Total Ratings Received</span>
+      <strong id="myRatingCount">—</strong>
+    </article>
+    <article class="profile-stat">
+      <span>Average Rating</span>
+      <strong id="myAverageRating">—</strong>
+    </article>
+  </section>
 
+  <section class="profile-uploads">
+    <div class="profile-section-heading">
+      <div>
+        <p class="profile-eyebrow">YOUR SUBMISSIONS</p>
+        <h2>My Uploads</h2>
+      </div>
+      <a class="profile-upload-link" href="upload.html">
+        <i class="fa-solid fa-plus"></i> Upload Photo
+      </a>
+    </div>
 
+    <div id="profileMessage" class="profile-message" role="status">
+      Loading your profile...
+    </div>
 
-
+    <div id="myUploadsGrid" class="profile-grid"></div>
+  </section>
+</main>
 
 
 

@@ -1,0 +1,191 @@
+
+.profile-page {
+  width: min(1100px, 92%);
+  margin: auto;
+  padding: 140px 0 65px;
+  min-height: 75vh;
+}
+
+.profile-heading {
+  text-align: center;
+  margin-bottom: 36px;
+}
+
+.profile-avatar {
+  width: 76px;
+  height: 76px;
+  display: grid;
+  place-items: center;
+  margin: 0 auto 18px;
+  border-radius: 50%;
+  background: var(--card);
+  border: 1px solid var(--border);
+  font-size: 30px;
+}
+
+.profile-eyebrow {
+  color: var(--secondary);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.8px;
+  margin-bottom: 10px;
+}
+
+.profile-heading h1 {
+  font: 700 clamp(2.2rem, 5vw, 3.5rem)/1.2
+    "Space Grotesk", sans-serif;
+  margin-bottom: 12px;
+}
+
+.profile-heading h1 span {
+  color: var(--secondary);
+}
+
+.profile-heading > p:last-child {
+  color: var(--text);
+  line-height: 1.7;
+}
+
+.profile-summary {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  margin-bottom: 55px;
+}
+
+.profile-stat {
+  padding: 22px;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: var(--card);
+}
+
+.profile-stat span {
+  display: block;
+  color: var(--text);
+  font-size: 13px;
+  margin-bottom: 12px;
+}
+
+.profile-stat strong {
+  font: 700 28px "Space Grotesk", sans-serif;
+}
+
+.profile-section-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 22px;
+}
+
+.profile-section-heading h2 {
+  font: 700 28px "Space Grotesk", sans-serif;
+}
+
+.profile-upload-link {
+  display: inline-flex;
+  gap: 8px;
+  align-items: center;
+  padding: 11px 15px;
+  border-radius: 12px;
+  text-decoration: none;
+  background: var(--primary);
+  color: white;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.profile-message {
+  padding: 24px 16px;
+  text-align: center;
+  line-height: 1.8;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: var(--card);
+  color: var(--text);
+}
+
+.profile-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.profile-photo-card {
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  background: var(--card);
+}
+
+.profile-photo-card img {
+  width: 100%;
+  height: 260px;
+  display: block;
+  object-fit: cover;
+}
+
+.profile-photo-body {
+  padding: 17px;
+}
+
+.profile-photo-body h3 {
+  font-size: 17px;
+  margin-bottom: 8px;
+  overflow-wrap: anywhere;
+}
+
+.profile-photo-body p {
+  color: var(--text);
+  font-size: 13px;
+  margin-top: 7px;
+  line-height: 1.6;
+}
+
+.profile-photo-rating {
+  color: #ffc83d !important;
+  font-weight: 700;
+}
+
+@media (max-width: 750px) {
+  .profile-summary {
+    gap: 10px;
+  }
+
+  .profile-stat {
+    padding: 14px;
+  }
+
+  .profile-stat strong {
+    font-size: 22px;
+  }
+
+  .profile-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .profile-photo-card img {
+    height: 210px;
+  }
+}
+
+@media (max-width: 480px) {
+  .profile-summary {
+    grid-template-columns: 1fr;
+  }
+
+  .profile-section-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .profile-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .profile-photo-card img {
+    height: 280px;
+  }
+}
