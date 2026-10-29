@@ -1,0 +1,84 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login / Sign Up | FaceArena</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/login.css">
+</head>
+<body class="account-page">
+
+  <header class="account-topbar">
+    <a class="account-brand" href="index.html">♛ FaceArena</a>
+    <a class="back-home" href="index.html">← Back to Home</a>
+  </header>
+
+  <main class="account-card">
+    <div class="account-icon">♛</div>
+    <p class="account-eyebrow">JOIN THE ARENA</p>
+    <h1 id="formTitle">Welcome <span>Back</span></h1>
+    <p class="account-subtitle" id="formSubtitle">
+      Login to your FaceArena account.
+    </p>
+
+    <div class="account-tabs">
+      <button type="button" id="loginTab" class="account-tab active">
+        Login
+      </button>
+      <button type="button" id="signupTab" class="account-tab">
+        Create Account
+      </button>
+    </div>
+
+    <form id="loginForm">
+      <label for="loginEmail">Email address</label>
+      <input id="loginEmail" type="email" autocomplete="email"
+             placeholder="you@example.com" required>
+
+      <label for="loginPassword">Password</label>
+      <input id="loginPassword" type="password"
+             autocomplete="current-password"
+             placeholder="Enter your password" required>
+
+      <button class="account-submit" type="submit">Login</button>
+
+      <button class="text-button" type="button" id="forgotPassword">
+        Forgot password?
+      </button>
+    </form>
+
+    <form id="signupForm" hidden>
+      <label for="signupName">Your name</label>
+      <input id="signupName" type="text" autocomplete="name"
+             maxlength="60" placeholder="Enter your name" required>
+
+      <label for="signupEmail">Email address</label>
+      <input id="signupEmail" type="email" autocomplete="email"
+             placeholder="you@example.com" required>
+
+      <label for="signupPassword">Create password</label>
+      <input id="signupPassword" type="password"
+             autocomplete="new-password" minlength="6"
+             placeholder="At least 6 characters" required>
+
+      <button class="account-submit" type="submit">
+        Create Account
+      </button>
+    </form>
+
+    <p id="accountMessage" class="account-message" role="status"
+       aria-live="polite"></p>
+
+    <p class="account-terms">
+      By continuing, you agree to use FaceArena respectfully.
+    </p>
+  </main>
+
+  <script type="module" src="js/login.js"></script>
+</body>
+</html>
