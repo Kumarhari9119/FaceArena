@@ -510,7 +510,7 @@
                      name="nickname" 
                      type="text" 
                      placeholder="Example : Alex" 
-                     required>
+                     required
     >
 
             </div>
@@ -565,7 +565,8 @@
 
                 <input
                     type="text"
-                    placeholder="India">
+                    placeholder="India"
+                    required>
 
             </div>
 
@@ -576,7 +577,8 @@
                 <label>
 
                     <input
-                        type="checkbox">
+                        type="checkbox"
+                        required>
 
                     I confirm that this photo belongs to me.
 
@@ -591,7 +593,8 @@
                 <label>
 
                     <input
-                        type="checkbox">
+                        type="checkbox"
+                        required>
 
                     I agree to the FaceArena Community Rules.
 
@@ -603,16 +606,19 @@
 
             <div class="upload-progress">
 
-                <div
+                <div 
+                    id="uploadProgressBar"
                     class="progress-bar">
 
                 </div>
 
             </div>
 
-            <p class="progress-text">
-
-                Ready to Upload
+            <p 
+            id="uploadProgressText"
+            class="progress-text"
+             role="status">
+               Ready to Upload
 
             </p>
 
