@@ -1,4 +1,12 @@
 
+import {
+  database,
+  authReady,
+  ref,
+  push,
+  set
+} from "./firebase.js";
+
 document.addEventListener("DOMContentLoaded", function () {
   const CLOUD_NAME = "zbgalhqw";
   const UPLOAD_PRESET = "facearena upload images";
@@ -98,9 +106,51 @@ document.addEventListener("DOMContentLoaded", function () {
       };
 
       window.faceArenaPendingUpload = uploadDetails;
+      
+
+
+
+      // Wait until Firebase guest authentication is ready
+      const user = await authReady;
+
+      // Generate a unique record ID in Realtime Database
+      const uploadRef = push(ref(database, "uploads"));
+
+      // Save submission details
+      await set(uploadRef, {
+        userId: user.uid,
+        nickname: uploadDetails.nickname,
+        age: uploadDetails.age,
+        gender: uploadDetails.gender,
+        country: uploadDetails.country,
+        imageUrl: uploadDetails.imageUrl,
+        createdAt: Date.now(),
+        status: "pending"
+      });
+
+      console.log("FaceArena submission saved successfully.");
+      console.log("Database record ID:", uploadRef.key);
+
+
+
+
+
+
+
+
 
       progressBar.style.width = "100%";
-      progressText.textContent = "Image uploaded successfully!";
+      progressText.textContent = "Image uploaded and submission saved successfully!";
+      
+
+
+
+
+
+
+
+
+
 
       console.log("Cloudinary upload successful.");
       console.log("Image URL:", uploadedImageUrl);
