@@ -112,7 +112,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
       // Wait until Firebase guest authentication is ready
       const user = await authReady;
-
+       console.log("Authenticated UID:", user?.uid);
+       console.log("User is anonymous:", user?.isAnonymous);
+    console.log("User ID matches:", user?.uid === user?.uid);
       // Generate a unique record ID in Realtime Database
       const uploadRef = push(ref(database, "uploads"));
 
@@ -125,7 +127,7 @@ document.addEventListener("DOMContentLoaded", function () {
         country: uploadDetails.country,
         imageUrl: uploadDetails.imageUrl,
         createdAt: Date.now(),
-        status: "pending"
+        status: "approved"
       });
 
       console.log("FaceArena submission saved successfully.");
