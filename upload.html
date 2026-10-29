@@ -1119,6 +1119,47 @@
 
 <!-- CUSTOM -->
 <script type="module" src="js/upload-controller.js"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const fileInput = document.getElementById("facearena-file-input");
+  const status = document.getElementById("upload-status");
+
+  const uploadButtons = document.querySelectorAll(
+    ".upload-btn, .secondary-btn, .primary-btn"
+  );
+
+  uploadButtons.forEach(function (button) {
+    button.addEventListener("click", function (event) {
+      event.preventDefault();
+      fileInput.click();
+    });
+  });
+
+  fileInput.addEventListener("change", function () {
+    const file = fileInput.files[0];
+
+    if (!file) return;
+
+    if (!file.type.startsWith("image/")) {
+      status.textContent = "Please select an image file.";
+      fileInput.value = "";
+      return;
+    }
+
+    status.textContent = "Image selected: " + file.name;
+  });
+});
+</script>
+<!-- Hidden photo picker -->
+<input
+  type="file"
+  id="facearena-file-input"
+  accept="image/*"
+  hidden
+/>
+
+<p id="upload-status" role="status"></p>
 </body>
 
 </html>
